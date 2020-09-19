@@ -1,0 +1,9 @@
+Lista 1:
+	1- Teclas B, C, L.
+	2- Borda na cena. Alterar gravidade: W, A, S, D. Extra: Tranpulin posicionado no canto inferior esquerdo.
+	3- Ok, mesma coisa que na 1.
+	4- Tecla 4. Será criado na posição do mouse (ao invés de no centro). Sugestão, use a parte superior externa para um teste limpo.
+	5- Tecla 5. Será criado na posição do mouse, posicione-o na rampa já existente.
+	6- Teclas 6, Y.
+	7- Tecla 7. Extra: U, H, J.
+	8- Tecla 8.
