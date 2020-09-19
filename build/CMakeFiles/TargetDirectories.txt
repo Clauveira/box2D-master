@@ -1,0 +1,9 @@
+C:/Dev/box2d-master/build/CMakeFiles/ALL_BUILD.dir
+C:/Dev/box2d-master/build/CMakeFiles/ZERO_CHECK.dir
+C:/Dev/box2d-master/build/src/CMakeFiles/box2d.dir
+C:/Dev/box2d-master/build/unit-test/CMakeFiles/unit_test.dir
+C:/Dev/box2d-master/build/extern/glad/CMakeFiles/glad.dir
+C:/Dev/box2d-master/build/extern/glfw/CMakeFiles/glfw.dir
+C:/Dev/box2d-master/build/extern/imgui/CMakeFiles/imgui.dir
+C:/Dev/box2d-master/build/extern/sajson/CMakeFiles/sajson.dir
+C:/Dev/box2d-master/build/testbed/CMakeFiles/testbed.dir

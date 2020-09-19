@@ -1,0 +1,11 @@
+c:\dev\box2d-master\build\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\src\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\unit-test\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\extern\glad\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\extern\glfw\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\extern\imgui\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\extern\sajson\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\testbed\cmakefiles\generate.stamp
+c:\dev\box2d-master\build\x64\debug\zero_check\zero_check.tlog\custombuild.command.1.tlog
+c:\dev\box2d-master\build\x64\debug\zero_check\zero_check.tlog\custombuild.read.1.tlog
+c:\dev\box2d-master\build\x64\debug\zero_check\zero_check.tlog\custombuild.write.1.tlog

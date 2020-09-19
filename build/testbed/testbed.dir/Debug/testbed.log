@@ -1,0 +1,14 @@
+﻿  TesteClaue01.cpp
+TesteClaue01.cpp(41,52): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(41,34): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(41,1): warning C4305: 'argumento': truncamento de 'double' para 'float'
+TesteClaue01.cpp(44,55): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(44,37): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(44,1): warning C4305: 'argumento': truncamento de 'double' para 'float'
+TesteClaue01.cpp(47,53): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(47,35): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(47,98): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(47,79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+TesteClaue01.cpp(66,1): warning C4305: '+=': truncamento de 'double' para 'float'
+TesteClaue01.cpp(70,1): warning C4305: '+=': truncamento de 'double' para 'float'
+  testbed.vcxproj -> C:\Dev\box2d-master\build\testbed\Debug\testbed.exe
