@@ -184,6 +184,21 @@
     <ClCompile Include="TesteClaue01.cpp">
       <Filter>Claue</Filter>
     </ClCompile>
+    <ClCompile Include="TesteClaue02.cpp">
+      <Filter>Claue</Filter>
+    </ClCompile>
+    <ClCompile Include="KeepOrbiting.cpp">
+      <Filter>Claue</Filter>
+    </ClCompile>
+    <ClCompile Include="AulaExemploColisoes.cpp">
+      <Filter>Claue</Filter>
+    </ClCompile>
+    <ClCompile Include="AulaJuntas.cpp">
+      <Filter>Claue</Filter>
+    </ClCompile>
+    <ClCompile Include="TesteClaue03.cpp">
+      <Filter>Claue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Dev\box2d-master\testbed\draw.h" />

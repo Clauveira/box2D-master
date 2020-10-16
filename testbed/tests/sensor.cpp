@@ -54,7 +54,7 @@ public:
 #else
 			{
 				b2CircleShape shape;
-				shape.m_radius = 5.0f;
+				shape.m_radius = 8.0f;
 				shape.m_p.Set(0.0f, 10.0f);
 
 				b2FixtureDef fd;
