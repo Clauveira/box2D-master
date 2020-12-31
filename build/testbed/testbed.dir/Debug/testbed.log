@@ -1,20 +1,2 @@
-﻿  TesteClaue03.cpp
-TesteClaue03.cpp(336,51): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(336,33): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(336,82): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(336,103): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(336,128): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(339,54): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(339,36): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(339,78): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(339,102): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(342,52): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(342,34): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(342,97): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(342,78): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-TesteClaue03.cpp(414,37): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(421,45): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(472,33): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-TesteClaue03.cpp(479,138): warning C4305: 'argumento': truncamento de 'double' para 'float'
-TesteClaue03.cpp(483,132): warning C4305: 'argumento': truncamento de 'double' para 'float'
+﻿  AulaJuntas.cpp
   testbed.vcxproj -> C:\Dev\box2d-master\build\testbed\Debug\testbed.exe

@@ -368,7 +368,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Users\csilveira\Desktop\Base.cpp" />
     <ClCompile Include="AulaExemploColisoes.cpp" />
     <ClCompile Include="AulaJuntas.cpp" />
     <ClCompile Include="C:\Dev\box2d-master\testbed\draw.cpp" />

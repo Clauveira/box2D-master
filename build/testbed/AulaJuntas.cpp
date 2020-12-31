@@ -1,3 +1,4 @@
+/*
 #include "test.h"
 
 class ExemploJuntas : public Test //voc cria a sua classe derivada da classe base Test
@@ -130,7 +131,7 @@ public:
 			//pJointDef.maxMotorForce = 50.0f; //N
 			//pJointDef.motorSpeed = -10.0f; //metros por segundo 
 			//pJointDef.enableMotor = true;
-
+/*
 			b2PrismaticJoint* pJoint = (b2PrismaticJoint*)m_world->CreateJoint(&pJointDef);
 			break;
 		}
@@ -257,4 +258,4 @@ float ExemploJuntas::degreesToRadians(float angle)
 float ExemploJuntas::radiansToDegrees(float angle)
 {
 	return angle * 180 / b2_pi;
-}
+}*/

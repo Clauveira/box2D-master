@@ -1,0 +1,3 @@
+﻿  Building Custom Rule C:/Dev/box2d-master/extern/glad/CMakeLists.txt
+  gl.c
+  glad.vcxproj -> C:\Dev\box2d-master\build\extern\glad\Release\glad.lib

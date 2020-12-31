@@ -1,0 +1,3 @@
+﻿  Building Custom Rule C:/Dev/box2d-master/extern/sajson/CMakeLists.txt
+  sajson.cpp
+  sajson.vcxproj -> C:\Dev\box2d-master\build\extern\sajson\Release\sajson.lib

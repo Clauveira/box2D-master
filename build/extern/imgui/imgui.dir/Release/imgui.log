@@ -1,0 +1,7 @@
+﻿  Building Custom Rule C:/Dev/box2d-master/extern/imgui/CMakeLists.txt
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_widgets.cpp
+  Gerando Código...
+  imgui.vcxproj -> C:\Dev\box2d-master\build\extern\imgui\Release\imgui.lib

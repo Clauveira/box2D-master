@@ -1,0 +1,10 @@
+^C:\DEV\BOX2D-MASTER\BUILD\CMAKEFILES\DD895427B6525CBE339947ABF1FCC07B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/box2d-master -BC:/Dev/box2d-master/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Dev/box2d-master/build/box2d.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

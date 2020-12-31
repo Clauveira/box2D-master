@@ -178,9 +178,6 @@
     <ClCompile Include="C:\Dev\box2d-master\testbed\tests\wheel_joint.cpp">
       <Filter>tests</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Users\csilveira\Desktop\Base.cpp">
-      <Filter>Claue</Filter>
-    </ClCompile>
     <ClCompile Include="TesteClaue01.cpp">
       <Filter>Claue</Filter>
     </ClCompile>

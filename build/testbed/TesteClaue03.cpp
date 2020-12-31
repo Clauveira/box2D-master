@@ -1,6 +1,6 @@
 #include "test.h"
 #include <string> 
-
+#include <iostream>
 
 
 class TesteClaue03 : public Test
@@ -37,7 +37,9 @@ private:
 		ForcaAplicada,
 		ForcaMinima = 5000.f,
 		ForcaMaxima = 500000.f;
-
+	////
+	float c_dampingRatio = 0.7f;
+	float c_frequencyHz = 4.5f;
 public:
 	TesteClaue03();
 	void Step(Settings& settings) override;
@@ -53,7 +55,7 @@ public:
 	void criaObjetos();
 	void criarProjetil(b2Vec2 pos);
 	void criarPonte(int unidadesLargura);
-	void criaRobo(b2Vec2 pos = b2Vec2(-20.0f, 16.0f))
+	void criaRobo(b2Vec2 pos = b2Vec2(-20.0f, 10.0f))
 	{
 		int e_count = 4;
 
@@ -62,142 +64,16 @@ public:
 
 		criaBraco(chest, CABECA, 1, b2Vec2(pos.x, pos.y+2.2f));
 
-		criaBraco(chest, DIREITA, e_count, b2Vec2(pos.x+1, pos.y + 1.0f));
-		criaBraco(chest, ESQUERDA, e_count, b2Vec2(pos.x-1, pos.y + 1.0f));
+		criaBraco(chest, DIREITA,  e_count, b2Vec2(pos.x +1.0f, pos.y + 1.0f), c_frequencyHz, c_dampingRatio);
+		criaBraco(chest, ESQUERDA, e_count, b2Vec2(pos.x -1.5f, pos.y + 1.0f), c_frequencyHz, c_dampingRatio);
 
-		criaBraco(chest, BAIXO, e_count, b2Vec2(pos.x+ 0.5f, pos.y-6.0f));
-		criaBraco(chest, BAIXO, e_count, b2Vec2(pos.x- 0.5f, pos.y-6.0f));
-
-		/*
-		{
-			b2PolygonShape shape;
-			shape.SetAsBox(0.5f, 0.125f);
-
-			b2FixtureDef fd;
-			fd.shape = &shape;
-			fd.density = 20.0f;
-
-			b2WeldJointDef jd;
-
-			b2Body* prevBody = chest;
-			for (int32 i = 0; i < e_count; ++i)
-			{
-				b2BodyDef bd;
-				bd.type = b2_dynamicBody;
-				bd.position.Set(-14.5f + 1.0f * i, 5.0f);
-				b2Body* body = m_world->CreateBody(&bd);
-				body->CreateFixture(&fd);
-
-				b2Vec2 anchor(-15.0f + 1.0f * i, 5.0f);
-				jd.Initialize(prevBody, body, anchor);
-				m_world->CreateJoint(&jd);
-
-				prevBody = body;
-			}
-		}
-		*/
-		/*
-		{
-			b2PolygonShape shape;
-			shape.SetAsBox(1.0f, 0.125f);
-
-			b2FixtureDef fd;
-			fd.shape = &shape;
-			fd.density = 20.0f;
-
-			b2WeldJointDef jd;
-			float frequencyHz = 5.0f;
-			float dampingRatio = 0.7f;
-
-			b2Body* prevBody = chest;
-			for (int32 i = 0; i < 3; ++i)
-			{
-				b2BodyDef bd;
-				bd.type = b2_dynamicBody;
-				bd.position.Set(-14.0f + 2.0f * i, 15.0f);
-				b2Body* body = m_world->CreateBody(&bd);
-				body->CreateFixture(&fd);
-
-				b2Vec2 anchor(-15.0f + 2.0f * i, 15.0f);
-				jd.Initialize(prevBody, body, anchor);
-				b2AngularStiffness(jd.stiffness, jd.damping, frequencyHz, dampingRatio, jd.bodyA, jd.bodyB);
-				m_world->CreateJoint(&jd);
-
-				prevBody = body;
-			}
-		}*/
-		/*
-		{
-			b2PolygonShape shape;
-			shape.SetAsBox(0.5f, 0.125f);
-
-			b2FixtureDef fd;
-			fd.shape = &shape;
-			fd.density = 20.0f;
-
-			b2WeldJointDef jd;
-
-			b2Body* prevBody = chest;
-			for (int32 i = 0; i < e_count; ++i)
-			{
-				b2BodyDef bd;
-				bd.type = b2_dynamicBody;
-				bd.position.Set(-4.5f + 1.0f * i, 5.0f);
-				b2Body* body = m_world->CreateBody(&bd);
-				body->CreateFixture(&fd);
-
-				if (i > 0)
-				{
-					b2Vec2 anchor(-5.0f + 1.0f * i, 5.0f);
-					jd.Initialize(prevBody, body, anchor);
-					m_world->CreateJoint(&jd);
-				}
-
-				prevBody = body;
-			}
-		}*/
-		/*
-		{//Solto e molenga
-		 
-			b2PolygonShape shape;
-			shape.SetAsBox(0.5f, 0.125f);
-
-			b2FixtureDef fd;
-			fd.shape = &shape;
-			fd.density = 20.0f;
-
-			b2WeldJointDef jd;
-			float frequencyHz = 8.0f;
-			float dampingRatio = 0.7f;
-
-			b2Body* prevBody = chest;
-			for (int32 i = 0; i < e_count; ++i)
-			{
-				b2BodyDef bd;
-				bd.type = b2_dynamicBody;
-				bd.position.Set(5.5f + 1.0f * i, 10.0f);
-				b2Body* body = m_world->CreateBody(&bd);
-				body->CreateFixture(&fd);
-
-				if (i > 0)
-				{
-					b2Vec2 anchor(5.0f + 1.0f * i, 10.0f);
-					jd.Initialize(prevBody, body, anchor);
-
-					b2AngularStiffness(jd.stiffness, jd.damping, frequencyHz, dampingRatio, prevBody, body);
-
-					m_world->CreateJoint(&jd);
-				}
-
-				prevBody = body;
-			}
-		}*/
+		criaBraco(chest, BAIXO, e_count, b2Vec2(pos.x+ 0.5f, pos.y-6.15f), c_frequencyHz *5, c_dampingRatio *5);
+		criaBraco(chest, BAIXO, e_count, b2Vec2(pos.x- 0.5f, pos.y-6.15f), c_frequencyHz *5, c_dampingRatio *5);
 
 
 	};
-	void criaBraco(b2Body* ground, int dir, int nPartes = 8, b2Vec2 pos = b2Vec2(0,0))
+	void criaBraco(b2Body* ground, int dir, int nPartes = 8, b2Vec2 pos = b2Vec2(0,0), float frequencyHz = 5.0f, float dampingRatio = 1.0f)
 	{
-
 		b2PolygonShape shape;
 
 		b2FixtureDef fd;
@@ -220,8 +96,9 @@ public:
 				b2Body* body = m_world->CreateBody(&bd);
 				body->CreateFixture(&fd);
 
-				b2Vec2 anchor(pos.x + 1.0f * i, pos.y);
+				b2Vec2 anchor(pos.x - 0.5f + 1.0f * i, pos.y);
 				jd.Initialize(prevBody, body, anchor);
+				b2AngularStiffness(jd.stiffness, jd.damping, frequencyHz, dampingRatio, jd.bodyA, jd.bodyB);
 				m_world->CreateJoint(&jd);
 
 				prevBody = body;
@@ -230,16 +107,17 @@ public:
 		case 1:
 			shape.SetAsBox(0.5f, 0.125f);
 
-			for (int32 i = 0; i < nPartes; ++i)//for (int32 i = nPartes; i > 0; --i)
+			for (int32 i = 0; i < nPartes; ++i)
 			{
 				b2BodyDef bd;
 				bd.type = b2_dynamicBody;
-				bd.position.Set(pos.x - 1.0f * i, pos.y);
+				bd.position.Set(pos.x + 0.5f - 1.0f * i, pos.y);
 				b2Body* body = m_world->CreateBody(&bd);
 				body->CreateFixture(&fd);
 
-				b2Vec2 anchor(pos.x - 1.0f * i, pos.y);
+				b2Vec2 anchor(pos.x +1.0f  - (1.0f * i), pos.y);
 				jd.Initialize(prevBody, body, anchor);
+				b2AngularStiffness(jd.stiffness, jd.damping, frequencyHz, dampingRatio, jd.bodyA, jd.bodyB);
 				m_world->CreateJoint(&jd);
 
 				prevBody = body;
@@ -256,8 +134,9 @@ public:
 				b2Body* body = m_world->CreateBody(&bd);
 				body->CreateFixture(&fd);
 
-				b2Vec2 anchor(pos.x, pos.y + 1.0f * i);
+				b2Vec2 anchor(pos.x, pos.y + 0.5f + 1.0f * i);
 				jd.Initialize(prevBody, body, anchor);
+				b2AngularStiffness(jd.stiffness, jd.damping, frequencyHz, dampingRatio, jd.bodyA, jd.bodyB);
 				m_world->CreateJoint(&jd);
 
 				prevBody = body;
@@ -281,9 +160,6 @@ public:
 			
 			break;
 		}
-		//b2Body* head = createBox(b2Vec2(pos.x, pos.y + 2), b2Vec2(0.8f, 0.5f), 10.0f, 1, 0);
-		
-		//return new b2Body();
 	};
 
 	void criarMatriz(int largura, int altura, b2Vec2 pos);
@@ -309,6 +185,10 @@ void TesteClaue03::Step(Settings& settings)
 	Test::Step(settings);
 
 	g_debugDraw.DrawString(5, m_textLine, "Claue Lista 3");
+	m_textLine += 15;
+	g_debugDraw.DrawString(5, m_textLine, "Tecla 5 cria Robos");
+	m_textLine += 15;
+	g_debugDraw.DrawString(5, m_textLine, "Teclas W,A,S,D movimenta Retangulo");
 	m_textLine += 15;
 
 	p = Player->GetWorldPoint(b2Vec2(0.0, 0.0));
@@ -342,6 +222,9 @@ void TesteClaue03::Keyboard(int key)
 		createEdge(b2Vec2(rand() % 100 - 50, rand() % 34 + 4), b2Vec2(rand() % 100 - 50, rand() % 100 - 50), 1.0, 0.5, 0.5);
 		break;
 
+	case GLFW_KEY_5:
+		criaRobo(m_mouseWorld);
+		break;
 
 	case GLFW_KEY_W:
 		Player->ApplyForce(b2Vec2(0.0, ForcaPulo), p, true);
@@ -363,6 +246,27 @@ void TesteClaue03::Keyboard(int key)
 
 	case GLFW_KEY_6:
 		criarMatriz(10, 1, MousePosition);
+		break;
+
+	case GLFW_KEY_1:
+		c_frequencyHz *= 1.4f;
+		std::cout << "/nfrequencyHz: " << c_frequencyHz;
+		break;
+	case GLFW_KEY_2:
+		c_frequencyHz *= 0.4f;
+		std::cout << "/nfrequencyHz: " << c_frequencyHz;
+		break;
+
+	case GLFW_KEY_3:
+		c_dampingRatio *= 1.4f;
+		std::cout << "/dampingRatio: " << c_dampingRatio;
+		break;
+	case GLFW_KEY_4:
+		c_dampingRatio *= 0.4f;
+		std::cout << "/dampingRatio: " << c_dampingRatio;
+		break;
+
+
 	}
 }
 
